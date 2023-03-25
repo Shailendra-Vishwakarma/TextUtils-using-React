@@ -3,8 +3,8 @@ import "./App.css";
 import TextForm from "./components/TextForm";
 import { useState } from "react";
 import Alert from "./components/Alert";
-import About from "./components/About";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import About from "./components/About";
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -31,31 +31,31 @@ function App() {
   };
   return (
     <>
-      <Router>
+      {/* <Router> */}
         
         <Navbar
-          title="cybersploit"
+          title="TextUtils"
           about="About Us"
           mode={mode}
           toggleMode={toggleMode}
         />
         <Alert alert={alert} />
         <div className="container my-3">
-        <Switch>
+        {/* <Switch>
             <Route exact path="/About">
               <About />
             </Route>
-            <Route exact path="/">
+            <Route exact path="/"> */}
               <TextForm
                 heading="Enter text to analyze"
                 mode={mode}
                 showAlert={showAlert}
-              />
-            </Route>
-            </Switch>
-        </div>
+               />
+             {/* </Route>
+            </Switch> */}
+      //   </div>
         
-      </Router>
+      {/*  </Router> */}
     </>
   );
 }
